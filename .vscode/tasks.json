@@ -1,0 +1,63 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Lint doctor components",
+			"type": "shell",
+			"command": "npx",
+			"args": [
+				"eslint",
+				"components/doctors/DoctorCard.tsx",
+				"components/doctors/DoctorsPage.tsx"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint two doctor components",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"D:\\healthcare-ai\\frontend",
+				"exec",
+				"--",
+				"eslint",
+				"D:\\healthcare-ai\\frontend\\components\\doctors\\DoctorCard.tsx",
+				"D:\\healthcare-ai\\frontend\\components\\doctors\\DoctorsPage.tsx"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint doctor components in frontend",
+			"type": "shell",
+			"command": "cmd.exe",
+			"args": [
+				"/d",
+				"/c",
+				"cd /d D:\\healthcare-ai\\frontend && node_modules\\.bin\\eslint.cmd components\\doctors\\DoctorCard.tsx components\\doctors\\DoctorsPage.tsx"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "ESLint doctor components",
+			"type": "shell",
+			"command": "D:\\healthcare-ai\\frontend\\node_modules\\.bin\\eslint.cmd",
+			"args": [
+				"components/doctors/DoctorCard.tsx",
+				"components/doctors/DoctorsPage.tsx"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "ESLint doctor components with frontend cwd",
+			"type": "shell",
+			"command": "Set-Location 'D:\\healthcare-ai\\frontend'; & '.\\node_modules\\.bin\\eslint.cmd' 'components\\doctors\\DoctorCard.tsx' 'components\\doctors\\DoctorsPage.tsx'",
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}
